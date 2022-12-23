@@ -1,10 +1,21 @@
 import React from "react";
 
-const Adjustcontent = () => {
+const Adjustcontent = ({
+  count,
+  readfont,
+  title,
+  link,
+  fontSize,
+  textHieght,
+  letterSpace,
+  alignleft,
+}) => {
   return (
-    <div className="content">
-      <h1>Title1</h1>
-      <p>
+    <div className={`content ${readfont} ${alignleft} `} style={{ count }}>
+      <h1 style={{ ...count, ...fontSize }} className={title}>
+        Title1
+      </h1>
+      <p style={{ ...count, ...textHieght, ...letterSpace }}>
         Lorem ipsum dolor sit amet. Est vitae natus aut maiores rerum vel quasi
         obcaecati. Aut vero fugit est blanditiis sunt aut ipsa laborum. Quo
         voluptates sapiente nam nemo eveniet quo ipsam sint. Quo veritatis autem
@@ -13,10 +24,11 @@ const Adjustcontent = () => {
         laboriosam voluptas ut recusandae dolores aut quidem deserunt eum
         cupiditate placeat. Vel fuga rerum quo amet dolores eum labore animi a
         molestiae quaerat vel incidunt dolore in fugiat quia.
-        
       </p>
-      <h1>Title2</h1>
-      <p>
+      <h1 style={{ ...count, ...fontSize }} className={title}>
+        Title2
+      </h1>
+      <p style={{ ...count, ...textHieght, ...letterSpace }}>
         Lorem ipsum dolor sit amet. Est vitae natus aut maiores rerum vel quasi
         obcaecati. Aut vero fugit est blanditiis sunt aut ipsa laborum. Quo
         voluptates sapiente nam nemo eveniet quo ipsam sint. Quo veritatis autem
@@ -25,9 +37,14 @@ const Adjustcontent = () => {
         laboriosam voluptas ut recusandae dolores aut quidem deserunt eum
         cupiditate placeat. Vel fuga rerum quo amet dolores eum labore animi a
         molestiae quaerat vel incidunt dolore in fugiat quia.
-        
       </p>
-      <a href="https://www.loremipzum.com/en/text-generator">Lorem ipsum</a>
+      <a
+        href="https://www.loremipzum.com/en/text-generator"
+        className={link}
+        style={{ ...count, ...textHieght, ...letterSpace }}
+      >
+        Lorem ipsum
+      </a>
     </div>
   );
 };
